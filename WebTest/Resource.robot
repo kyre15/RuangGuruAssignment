@@ -2,6 +2,7 @@
 Library  SeleniumLibrary
 Library  OperatingSystem
 Library  DebugLibrary
+Library  String
 
 Resource  Pages/_IMPORT_PAGES.robot
 Resource  Logics/_IMPORT_LOGICS.robot

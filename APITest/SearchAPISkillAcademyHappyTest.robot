@@ -19,7 +19,7 @@ Verify Page Param Response
     Verify Response Status Success
 
 Verify Page Size Param Response
-    Get  search?pageSize=1
+    Get  search?pageSize=20
     Verify Response Body
     Verify Response Status Success
 
