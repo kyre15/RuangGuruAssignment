@@ -15,3 +15,9 @@ Verify Search Result Is Correct
     HomePage.Input Search Bar  ${validTopic}
     HomePage.Click Search Icon
     SearchPage.Verify Search Result  ${validTopic}
+
+Verify Invalid Search Result
+    HomePage.Verify SearchBar
+    HomePage.Input Search Bar  ${invalidTopic}
+    HomePage.Click Search Icon
+    SearchPage.Verify No Result Page  ${invalidTopic}
