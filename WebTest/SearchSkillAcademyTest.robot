@@ -21,3 +21,13 @@ Verify Invalid Search Result
     HomePage.Input Search Bar  ${invalidTopic}
     HomePage.Click Search Icon
     SearchPage.Verify No Result Page  ${invalidTopic}
+
+Verify Seach Result Filtered By Highest Rating
+    HomePage.Verify SearchBar
+    HomePage.Input Search Bar  ${validTopic}
+    HomePage.Click Search Icon
+    SearchPage.Verify Drop Down Filter
+    SearchPage.Click Drop Down Filter
+    SearchPage.Choose Drop Down Filter  Rating Tertinggi
+    SearchPage.Verify Drop Down Filter  Rating Tertinggi
+    SearchLogic.Verify Highest Filter Rating Work

@@ -1,8 +1,10 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library  OperatingSystem
+Library  DebugLibrary
 
 Resource  Pages/_IMPORT_PAGES.robot
+Resource  Logics/_IMPORT_LOGICS.robot
 
 *** Variables ***
 ${skillAcademy}=  https://skillacademy.com/
