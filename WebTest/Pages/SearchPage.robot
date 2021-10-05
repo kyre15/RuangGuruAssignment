@@ -29,6 +29,23 @@ Get Price Course
     ${price}=  Get Text  //div[${index}]//div[@data-testid="course-card"]//*[@data-testid="price-final"]
     [Return]  ${price}
 
+Get Price Offline Course
+    [Arguments]  ${index}
+    ${price}=  Get Text  //div[${index}]//div[@data-testid="offline-course-card"]//*[@data-testid="price-final"]
+    [Return]  ${price}
+
 Get Price Course Element Count
     ${count}=  Get Element Count  //div//div[@data-testid="course-card"]//*[@data-testid="price-final"]
     [Return]  ${count}
+
+Verify Drop Down Filter Price
+    [Arguments]  ${filter}=Harga
+    Wait Until Element Is Visible  //*[@data-testid="dropdown-container"]//*[text()="${filter}"]  timeout=${FAST_TIMEOUT}
+
+Click Drop Down Filter Price
+    [Arguments]  ${filter}=Harga
+    Click Element  //*[@data-testid="dropdown-container"]//*[text()="${filter}"]
+
+Choose Drop Down Filter Price
+    [Arguments]  ${filter}
+    Click Element  //*[@data-testid="dropdown-container"]//*[text()="${filter}"]

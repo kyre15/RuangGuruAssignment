@@ -46,10 +46,50 @@ Verify Search Result Filtered By Highest Price
 
 Verify Search Result Filtered By Lowest Price
     HomePage.Verify SearchBar
-    HomePage.Input Search Bar  cpns
+    HomePage.Input Search Bar  ${validTopic.cpns}
     HomePage.Click Search Icon
     SearchPage.Verify Drop Down Filter Sort
     SearchPage.Click Drop Down Filter Sort
     SearchPage.Choose Drop Down Filter Sort  Harga Tertinggi
     SearchPage.Verify Drop Down Filter Sort  Harga Tertinggi
     SearchLogic.Verify Lowest Filter Price Work
+
+Verify Search Result Filtered By Harga <100.000
+    HomePage.Verify SearchBar
+    HomePage.Input Search Bar  ${validTopic.pemrograman}
+    HomePage.Click Search Icon
+    SearchPage.Verify Drop Down Filter Price
+    SearchPage.Click Drop Down Filter Price
+    SearchPage.Choose Drop Down Filter Price  <100.000
+    SearchPage.Verify Drop Down Filter Price  <100.000
+    SearchLogic.Verify Price Lower Then 100.000
+
+Verify Search Result Filtered By Harga 100.000 - 149.999
+    HomePage.Verify SearchBar
+    HomePage.Input Search Bar  ${validTopic.pemrograman}
+    HomePage.Click Search Icon
+    SearchPage.Verify Drop Down Filter Price
+    SearchPage.Click Drop Down Filter Price
+    SearchPage.Choose Drop Down Filter Price  100.000 - 149.999
+    SearchPage.Verify Drop Down Filter Price  100.000 - 149.999
+    SearchLogic.Verify Price Between 100.000 Until 149.999
+
+Verify Search Result Filtered By Harga 150.000 - 200.000
+    HomePage.Verify SearchBar
+    HomePage.Input Search Bar  ${validTopic.pemrograman}
+    HomePage.Click Search Icon
+    SearchPage.Verify Drop Down Filter Price
+    SearchPage.Click Drop Down Filter Price
+    SearchPage.Choose Drop Down Filter Price  150.000 - 200.000
+    SearchPage.Verify Drop Down Filter Price  150.000 - 200.000
+    SearchLogic.Verify Price Between 150.000 Until 200.000
+
+Verify Search Result Filtered By Harga >200.000
+    HomePage.Verify SearchBar
+    HomePage.Input Search Bar  ${validTopic.pemrograman}
+    HomePage.Click Search Icon
+    SearchPage.Verify Drop Down Filter Price
+    SearchPage.Click Drop Down Filter Price
+    SearchPage.Choose Drop Down Filter Price  >200.000
+    SearchPage.Verify Drop Down Filter Price  >200.000
+    SearchLogic.Verify Price Higher Then 200.000
