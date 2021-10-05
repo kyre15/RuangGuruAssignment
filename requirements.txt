@@ -1,0 +1,4 @@
+robotframework-selenium2library
+RESTinstance
+selenium
+robotframework
